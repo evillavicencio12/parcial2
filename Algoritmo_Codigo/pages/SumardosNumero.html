@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar Números</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sumar Números</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="../index.html">
+                <label for="num1">
+                    <input type="number" id="num1" value="" placeholder="Ingrese Primer Número">
+                </label>
+                <label for="num2">
+                    <input type="number" id="num2" value="" placeholder="Ingrese Segundo Número">
+                </label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="sumarNumeros()">Sumar</button>
+                    <button type="button" class="boton" onclick=>Regresar al menu</button>
+                </div>
+                <div id="resp">
+                    Aquí va a ir la respuesta:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Daniel Soft.</h6>
+    </footer>
+    <script>
+        function sumarNumeros() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var resultado = num1 + num2;
+            document.getElementById("resp").innerHTML = `La suma es: ${resultado}`;
+        }
+
+        function regresar() {
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("resp").innerHTML = "Aquí va a ir la respuesta:";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Descuento Por Antigüedad</title>
+</head>
+<body>
+    <header>
+        <h1>Descuento Por Antigüedad</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="../index.html">
+                <label for="sal">
+                    <input type="number" id="sal" value="" placeholder="Ingrese Salario" >
+                </label>
+                <label for="años">
+                    <input type="number" id="años" value="" placeholder="Años en la empresa">
+                </label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.descuentoAntigüedad()">Aceptar</button>
+                    <button type="submit" class="boton">Regresar al menú</button>
+                </div>
+                <div id = "resp">
+                    Su bono por antigüedad en la empresa es:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Erick Soft</h6>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

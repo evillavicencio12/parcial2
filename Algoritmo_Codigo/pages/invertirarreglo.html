@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invertir Arreglo</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Invertir Arreglo</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="../index.html">
+                <label for="num">
+                    <input type="number" id="num" value="" placeholder="Ingrese Numero">
+                </label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="invertirArreglo()">Aceptar</button>
+                    <button type="button" class="boton" onclick="regresar()">regresar al menu</button>
+                </div>
+                <div id="resp">
+                    Aquí va a ir la respuesta:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Daniel Soft.</h6>
+    </footer>
+<script>
+        function invertirArreglo() {
+            var num = document.getElementById("num").value;
+            var arreglo = [];
+            for (var i = 1; i <= num; i++) {
+                arreglo.push(i);
+            }
+            var resultado = arreglo.reverse();
+            document.getElementById("resp").innerHTML = `Arreglo invertido: [${resultado}]`;
+
+            
+        function regresar() {
+            document.getElementById("num").value = "";
+            document.getElementById("resp").innerHTML = "Aquí va a ir la respuesta:";
+            }
+        }
+</script>
+</body>
+
+</html>

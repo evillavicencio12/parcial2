@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Calculadora de compra de multiples articulos</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de compra de multiples articulos</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="../index.html">
+                <label for="precio">
+                    <input type="number" id="precio" value="" placeholder="Ingrese el precio del articulo" >
+                </label>
+                <label for="cant">
+                    <input type="number" id="cant" value="" placeholder="Ingrese la cantidad" >
+                </label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.multiplesArtic()">Aceptar</button>
+                    <button type="submit" class="boton">Regresar al menú</button>
+                </div>
+                <div id = "resp">
+                    El total es de:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Erick Soft</h6>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+

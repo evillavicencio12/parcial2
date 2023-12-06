@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Área de un Rectángulo</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calcular Área de un Rectángulo</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="../index.html">
+                <label for="base">
+                    <input type="number" id="base" value="" placeholder="Ingrese la Base">
+                </label>
+                <label for="altura">
+                    <input type="number" id="altura" value="" placeholder="Ingrese la Altura">
+                </label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="calcularAreaRectangulo()">Calcular Área</button>
+                    <button type="button" class="boton">regresar al menu</button>
+                </div>
+                <div id="resp">
+                    Aquí va a ir la respuesta:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Daniel Soft.</h6>
+    </footer>
+    <script>
+        function calcularAreaRectangulo() {
+            var base = parseInt(document.getElementById("base").value);
+            var altura = parseInt(document.getElementById("altura").value);
+            var area = base * altura;
+            document.getElementById("resp").innerHTML = `El área del rectángulo es: ${area}`;
+        }
+
+        function regresar() {
+            document.getElementById("base").value = "";
+            document.getElementById("altura").value = "";
+            document.getElementById("resp").innerHTML = "Aquí va a ir la respuesta:";
+        }
+    </script>
+</body>
+
+</html>

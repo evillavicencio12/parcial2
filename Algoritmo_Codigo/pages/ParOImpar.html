@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinar Paridad</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Determinar Paridad</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="../index.html">
+                <label for="numero">
+                    <input type="number" id="numero" value="" placeholder="Ingrese un Número">
+                </label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="determinarParidad()">Determinar Paridad</button>
+                    <button type="button" class="boton" onclick=>Regresar al menu</button>
+                </div>
+                <div id="resp">
+                    Aquí va a ir la respuesta:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Daniel Soft.</h6>
+    </footer>
+    <script>
+        function determinarParidad() {
+            var numero = parseInt(document.getElementById("numero").value);
+            if (numero % 2 === 0) {
+                document.getElementById("resp").innerHTML = "Es un número par.";
+            } else {
+                document.getElementById("resp").innerHTML = "Es un número impar.";
+            }
+        }
+
+        function regresar() {
+            document.getElementById("numero").value = "";
+            document.getElementById("resp").innerHTML = "Aquí va a ir la respuesta:";
+        }
+    </script>
+</body>
+
+</html>

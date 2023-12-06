@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir Números del 1 al 10</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Imprimir Números del 1 al 10</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="../index.html">
+                <div class="botones">
+                    <button type="button" class="boton" onclick="imprimirNumeros()">Imprimir Números</button>
+                    <button type="button" class="boton" onclick=>Regresar al menu</button>
+                </div>
+                <div id="resp">
+                    Aquí va a ir la respuesta:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Daniel Soft.</h6>
+    </footer>
+    <script>
+        function imprimirNumeros() {
+            let resultado = "";
+            for (var i = 1; i <= 10; i++) {
+                resultado += i + "<br>";
+            }
+            document.getElementById("resp").innerHTML = resultado;
+        }
+
+        function regresar() {
+            document.getElementById("resp").innerHTML = "Aquí va a ir la respuesta:";
+        }
+    </script>
+</body>
+
+</html>

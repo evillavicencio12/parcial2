@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Calculadora de Factura de Impuestos</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Factura ded Impuestos</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="../index.html">
+                <label for="fact">
+                    <input type="number" id="fact" value="" placeholder="Ingrese el valor de su factura" >
+                </label>
+                <label for="porcentaje">
+                    <input type="number" id="porcentaje" value="" placeholder="Ingrese el porcentaje de impuesto(1-12)" >
+                </label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.factImpuestos()">Aceptar</button>
+                    <button type="submit" class="boton">Regresar al menú</button>
+                </div>
+                <div id = "resp">
+                    Su total es de:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Erick Soft</h6>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

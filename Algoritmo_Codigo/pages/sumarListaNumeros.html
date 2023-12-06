@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar Lista de Números</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sumar Lista de Números</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="../index.html">
+                <label for="numeros">
+                    <input type="text" id="numeros" value="" placeholder="Ingrese Números (separados por coma)">
+                </label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="sumarListaNumeros()">Sumar Números</button>
+                    <button type="button" class="boton" onclick=>Regresar al menu</button>
+                </div>
+                <div id="resp">
+                    Aquí va a ir la respuesta:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Daniel Soft.</h6>
+    </footer>
+    <script>
+        function sumarListaNumeros() {
+            var numeros = document.getElementById("numeros").value.split(",").map(Number);
+            var suma = 0;
+            for (var i = 0; i < numeros.length; i++) {
+                suma += numeros[i];
+            }
+            document.getElementById("resp").innerHTML = `La suma de los números es: ${suma}`;
+        }
+
+        function regresar() {
+            document.getElementById("numeros").value = "";
+            document.getElementById("resp").innerHTML = "Aquí va a ir la respuesta:";
+        }
+    </script>
+</body>
+
+</html>

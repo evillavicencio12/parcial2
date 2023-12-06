@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Índice</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Buscar Índice</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="./index.html">
+                <label for="num">
+                    <input type="number" id="num" value="" placeholder="Ingrese Número">
+                </label>
+                <label for="valor">
+                    <input type="number" id="valor" value="" placeholder="Ingrese Valor a Buscar">
+                </label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="buscarIndice()">Aceptar</button>
+                    <button type="button" class="boton">Regresar al menu</button>
+                </div>
+                <div id="resp">
+                    Aquí va a ir la respuesta:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Daniel Soft.</h6>
+    </footer>
+    <script>
+        function buscarIndice() {
+            var num = document.getElementById("num").value;
+            var valor = document.getElementById("valor").value;
+            var arreglo = [];
+            for (var i = 1; i <= num; i++) {
+                arreglo.push(i);
+            }
+            var indices = [];
+            for (var i = 0; i < arreglo.length; i++) {
+                if (arreglo[i] == valor) {
+                    indices.push(i);
+                }
+            }
+            document.getElementById("resp").innerHTML = `Índices del valor ${valor}: [${indices}]`;
+        }
+
+        function regresar() {
+            document.getElementById("num").value = "";
+            document.getElementById("valor").value = "";
+            document.getElementById("resp").innerHTML = "Aquí va a ir la respuesta:";
+        }
+    </script>
+</body>
+
+</html>

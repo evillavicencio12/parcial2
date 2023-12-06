@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Suma de números pares</title>
+
+</head>
+<body>
+    <header>
+        <h1>Suma de números pares</h1>
+    </header>
+    <main>
+        <section class="container">
+            <form action="../index.html">
+                <label for="desde">
+                    <input type="number" id="desde" value="0" placeholder="Desde el número 0" required min="0" max="0">
+                </label>
+                <label for="hasta">
+                    <input type="number" id="hasta" value="50" placeholder="Hasta el número 50" required min="50" max="50">
+                </label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.numerosPares()" >Aceptar</button>
+                    <button type="submit" class="boton">Regresar al menú</button>
+                </div>
+                <div id="resp">
+                    Los números pares son:
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - Erick Soft</h6>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
